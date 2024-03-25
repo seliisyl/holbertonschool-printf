@@ -1,0 +1,30 @@
+
+## NAME
+
+_printf - mimic the standart function printf and produces output according to a format.
+## SYNOPSIS
+
+int _printf(const char *format, ...);
+
+#include main.h
+## DESCRIPTION
+
+Function mimics the behavior of the standard function and is used to print formatted output to the standard output.
+The function scans the string and writes each character to the standard output. When there is a conversion specifier, the function will call other functions via a va_list, which will convert and write the following characters according to the functions called.
+
+Conversion specifier
+
+* %c : prints a single character
+* %s : prints a string of characters
+* % : prints a percent single
+* %d : prints a decimal number 
+* %i : prints an integer number
+
+* flag characters, field width, precision, length modifiers : we do not use them because its a simplified version of printf
+## RETURN VALUE
+
+The function returns the number of characters printed, excluding the null byte used to end output to strings.
+## EXAMPLES
+## DATE
+
+28/04/2024
