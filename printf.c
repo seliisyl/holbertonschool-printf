@@ -4,7 +4,7 @@
 
 /**
  * _printf - function that produces output according to a format
- * @format: chaine de format
+ * @format: string that contains format specifiers and any additional text
  * Return: number of characters printed
  */
 
@@ -23,14 +23,14 @@ int _printf(const char *format, ...)
 			if (*format == 'c')
 			{
 				int ch = va_arg(args, int);
-				/* Récupérer le caractère de la liste d'argent */
-				printf("%c", ch); /* Imprimer le caractèr */
+				/* Récupé le caractère de la liste dargument */
+				printf("%c", ch); /* Imprime le caract�re */
 			}
 			else if (*format == 's')
 			{
 				char *str = va_arg(args, char*);
-				/* Récupérer la chaîne de caractères de la liste gument */
-				printf("%s", str); /* Imprimer la chaîne de caracere*/
+				/* Récupé la chaîne de caractères de la listargument */
+				printf("%s", str); /* Imprime la chaîne de caacteres */
 			}
 			else
 			{
