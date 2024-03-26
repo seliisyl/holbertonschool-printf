@@ -1,30 +1,49 @@
+.\" Manpage for _printf
+.TH _printf 3 "March 2024" "Version 1.0" "User Commands"
 
-## NAME
+.SH NAME
+_printf \- mimic the standard function printf and produces output according to a format.
 
-_printf - mimic the standart function printf and produces output according to a format.
-## SYNOPSIS
+.SH SYNOPSIS
+.B #include <main.h>
+.sp
+.B int _printf(const char *format, ...);
 
-int _printf(const char *format, ...);
-
-#include main.h
-## DESCRIPTION
-
+.SH DESCRIPTION
 Function mimics the behavior of the standard function and is used to print formatted output to the standard output.
 The function scans the string and writes each character to the standard output. When there is a conversion specifier, the function will call other functions via a va_list, which will convert and write the following characters according to the functions called.
 
-Conversion specifier
+Conversion specifier:
 
-* %c : prints a single character
-* %s : prints a string of characters
-* % : prints a percent single
-* %d : prints a decimal number 
-* %i : prints an integer number
+.IP "%c"
+prints a single character
+.IP "%s"
+prints a string of characters
+.IP "%"
+prints a percent single
+.IP "%d"
+prints a decimal number
+.IP "%i"
+prints an integer number
 
-* flag characters, field width, precision, length modifiers : we do not use them because its a simplified version of printf
-## RETURN VALUE
-
+.SH RETURN VALUE
 The function returns the number of characters printed, excluding the null byte used to end output to strings.
-## EXAMPLES
-## DATE
 
-28/04/2024
+.SH EXAMPLES
+
+int main() 
+{
+    int printed_chars = _printf("Hello, world!\n");
+    printf("Number of characters printed: %d\n", printed_chars);
+    return 0;
+}
+
+.SH DATE
+28/03/2024
+
+.SH BUGS
+No known bugs.
+
+.SH AUTH
+SYLLA SElimata
+ONIER Pauline
