@@ -28,6 +28,9 @@ $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
     va_arg (man 3 va_arg).
 ## EXAMPLES
 ## MAN PAGE
+
+You can find the man page for _printf [here](man_3_printf).
+
 ## TESTING + valgrind
 ## FLOWCHART
 ## BUGS
