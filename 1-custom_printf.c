@@ -3,11 +3,11 @@
 #include "main.h"
 
 /**
- * custom_printf - function that produces output according to a format
+ * _printf - function that produces output according to a format
  * @format: string of char
  * Return:  the number of characters printed
  */
-int custom_printf(const char *format, ...)
+int _printf(const char *format, ...)
 {
 	va_list args;
 	int printed_chars = 0;
