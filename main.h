@@ -5,6 +5,6 @@
 
 int _putchar(char c);
 int _printf(const char *format, ...);
-int customprintf(const char *format, ...);
+int custom_printf(const char *format, ...);
 
 #endif
