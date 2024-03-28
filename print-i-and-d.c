@@ -24,13 +24,25 @@ int print_i_d(va_list args)
 		num = n;
 	}
 
+	char_count += print_digits(num);
+	return (char_count);
+}
+/**
+ * print_digits - Recursively print digits of an integer
+ * @num: the number to print
+ * Return: the number of characters printed
+ */
+int print_digits(unsigned int num)
+{
+	int char_count = 0;
+
 	if (num / 10 != 0)
 	{
-		char_count += print_i_d(args);
+		char_count += print_digits(num / 10);
 	}
 
 	_putchar((num % 10) + '0');
 	char_count++;
 
-	return (char_count);
+	return char_count;
 }
