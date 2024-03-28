@@ -72,7 +72,45 @@ You can find the man page for _printf [here](man_3_printf).
 
 ## TESTING + valgrind
 
-
+root@e93bae6dc3f74cae80941d1296a5ae94-2377118072:/holbertonschool-printf# valgrind ./test
+==11837== Memcheck, a memory error detector
+==11837== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==11837== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==11837== Command: ./test
+==11837== 
+Let's try to printf a simple sentence.
+Let's try to printf a simple sentence.
+Length:[39, 39]
+Length:[39, 39]
+Negative:[-762534]
+Negative:[-762534]
+Unsigned:[%u]
+Unsigned:[2147484671]
+Unsigned octal:[%o]
+Unsigned octal:[20000001777]
+Unsigned hexadecimal:[%x, %X]
+Unsigned hexadecimal:[800003ff, 800003FF]
+Character:[H]
+Character:[H]
+String:[I am a string !]
+String:[I am a string !]
+Address:[%p]
+Address:[0x7ffe637541f0]
+Percent:[%]
+Percent:[%]
+Len:[12]
+Len:[12]
+Unknown:[%r]
+Unknown:[%r]
+==11837== 
+==11837== HEAP SUMMARY:
+==11837==     in use at exit: 0 bytes in 0 blocks
+==11837==   total heap usage: 1 allocs, 1 frees, 1,024 bytes allocated
+==11837== 
+==11837== All heap blocks were freed -- no leaks are possible
+==11837== 
+==11837== For lists of detected and suppressed errors, rerun with: -s
+==11837== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 ## FLOWCHART
 
