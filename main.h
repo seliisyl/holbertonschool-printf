@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-
+#include <stdarg.h>
 
 /**
  * struct printf - struct
@@ -19,6 +19,7 @@ typedef struct printf
 
 } _print_func;
 
+	int print_digits(unsigned int num);
 	int _putchar(char c);
 	int print_c(va_list args);
 	int  print_s(va_list args);
