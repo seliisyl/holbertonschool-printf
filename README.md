@@ -114,9 +114,7 @@ Unknown:[%r]
 
 ## FLOWCHART
 
-<img width="335" alt="image" src="https://github.com/seliisyl/holbertonschool-printf/assets/158849359/c9295951-1cff-4ba2-b979-2387b4f51519">
-
-
+<img width="270" alt="image" src="https://github.com/seliisyl/holbertonschool-printf/assets/158849359/7536823d-bfce-4d5e-af4f-fe3686bca890">
 
 ## BUGS
 
