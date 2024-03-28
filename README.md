@@ -114,7 +114,8 @@ Unknown:[%r]
 
 ## FLOWCHART
 
-![flowchart](https://files.slack.com/files-pri/T0423U1MW21-F06RTUMAS3U/image.png)
+<img width="335" alt="image" src="https://github.com/seliisyl/holbertonschool-printf/assets/158849359/c9295951-1cff-4ba2-b979-2387b4f51519">
+
 
 
 ## BUGS
