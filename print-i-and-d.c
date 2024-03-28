@@ -2,8 +2,8 @@
 #include <stdarg.h>
 
 /**
- * print_id - print i and d and sends them to int and deci
- * @n: number to be printed
+ * print_i_d - print i and d and sends them to int and deci
+ * @args: argument liste contenant entier a imprimer
  * Return: the correct count
  */
 
@@ -44,5 +44,5 @@ int print_digits(unsigned int num)
 	_putchar((num % 10) + '0');
 	char_count++;
 
-	return char_count;
+	return (char_count);
 }
