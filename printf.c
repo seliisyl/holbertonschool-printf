@@ -1,53 +1,58 @@
-#include <stdio.h>
-#include <stdarg.h>
+#include <stdlib.h>
 #include "main.h"
+#include <stdarg.h>
 
 /**
- * _printf - function that produces output according to a format
- * @format: string of char
- * Return:  the number of characters printed
+ * _printf - fonction pour sélectionner la fonction correcte
+ * @format: liste des arguments
+ * Return: nombre de caractères imprimés
  */
+
 int _printf(const char *format, ...)
 {
 	va_list args;
-	int count = 0;
+	int i = 0;
+	int printed_chars = 0;
 
 	va_start(args, format);
 
-	while (*format != '\0')
-	{
-		if (*format == '%')
-		{
-			format++;
-			if (*format == 'c')
-			{
-				putchar(va_arg(args, int));
-				count++;
-			} else if (*format == 's')
-			{
-				char *str = va_arg(args, char *);
+	while (format[i] != '\0')
 
-				while (*str != '\0')
-				{
-					putchar(*str++);
-					count++;
-				}
-			}
-			else if (*format == '%')
+	{
+		if (format[i] == '%')
+		{
+			_print_func print[] = {{"c", print_c}, {"s", print_s}, {"d", print_i_d}, {"i", print_i_d}, {"%", print_purcent}, {NULL, NULL}};
+
+			int j = 0;
+
+			while (print[j].op)
 			{
-				putchar('%');
-				count++;
+				if (format[i + 1] == *print[j].op)
+				{
+					printed_chars += print[j].f(args);
+					i++;
+					break;
+				}
+				j++;
+			}
+
+			if (!print[j].op)
+			{
+				_putchar('%');
+				_putchar(format[i + 1]);
+				printed_chars += 2;
+				i++;
 			}
 		}
 		else
 		{
-			putchar(*format);
-			count++;
+			_putchar(format[i]);
+			printed_chars++;
 		}
-		format++;
+		i++;
 	}
 
 	va_end(args);
-	return (count);
+	return (printed_chars);
 }
 
