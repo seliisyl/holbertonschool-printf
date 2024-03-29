@@ -113,7 +113,7 @@ Unknown:[%r]
 ==11837== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 ## FLOWCHART
-<img width="305" alt="image" src="https://github.com/seliisyl/holbertonschool-printf/assets/158849359/0da82c1d-944e-4974-bcd3-3e45d01f6067">
+<img width="296" alt="image" src="https://github.com/seliisyl/holbertonschool-printf/assets/158849359/e21f1142-6190-4ce9-a282-6fc538c5b1de">
 
 ## BUGS
 
